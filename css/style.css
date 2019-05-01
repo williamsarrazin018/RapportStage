@@ -100,7 +100,12 @@ html {
 
    p img {
      max-width:100%;
+     text-align:center;
    } 
+
+   img {
+     text-align: center;
+   }
 
    #exempleFenetre {
     background: #4e91fc;
