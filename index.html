@@ -138,7 +138,7 @@
           <br/>
           5- Dans notre index.html, on doit inclure les fichiers « dhtmlx.js » et « dhtmlx.css » entre les deux balises « head » au début du fichier.
           <br/><br/>
-          <img src="images/imports.PNG"/>
+          <img src="images/imports.png"/>
           <br/><br/>
           Après ces cinq étapes faciles, nous sommes déjà prêts à commencer à utiliser DHTMLX.
       </p>
@@ -152,7 +152,7 @@
           Par exemple, on peut voir l’initialisation d’une barre d’outils dans une cellule d’un layout ici :
           <br/>
           <br/>
-          <img src="images/exemple-initjs.PNG"/>
+          <img src="images/exemple-initjs.png"/>
           <br/>
           <br/>
           C’est une méthode intéressante, mais je préfère la deuxième qui consiste à créer un élément HTML comme un « div » et à lui lier un objet DHTMLX. 
@@ -166,7 +166,7 @@
           Par exemple, on peut voir l’initialisation d’une barre d’outils dans un div ici : 
           <br/>
           <br/>
-          <img src="images/exemple-initdiv.PNG"/>
+          <img src="images/exemple-initdiv.png"/>
 
       </p>
       <br/>
@@ -206,15 +206,15 @@
         HTML comme une balise div, body, section, article, etc.  Le layout sert surtout à organiser notre page, à lui donner un gabarit de base composé de différentes cellules.  Avec notre librairie, on a le choix de 
         plusieurs modèles et on en précisera un lors de la création de notre layout.  En fait, il y a 39 modèles qu'on peut choisir comme on peut voir ici : 
         <br/><br/>
-        <img src="images/layout-patterns.PNG"/>
+        <img src="images/layout-patterns.png"/>
         <br/><br/>
         1.  Toujours à partir de notre méthode pour créer la fenêtre, on initialise un layout de type « 1C » dans notre cas en l'attachant à notre fenêtre.
         <br/><br/>
-        <img src="images/exemple2-initialiserlayout.PNG"/>
+        <img src="images/exemple2-initialiserlayout.png"/>
         <br/><br/>
         2.  On va ensuite changer le titre de la cellule de notre layout.  Si on avait un layout à plusieurs cellules, on pourrait changer le titre de chacune d'elles en précisant la lettre de la cellule.
         <br/><br/>
-        <img src="images/exemple2-changertitre.PNG"/>
+        <img src="images/exemple2-changertitre.png"/>
         <br/><br/>
       </p>
       <div id="exempleFenetre" onclick='ouvrirFenetreExemple2()'>
@@ -232,8 +232,8 @@
         <br/>
         1.  On commence par initialiser notre grille en l'attachant dans la cellule « a » de notre layout et on appelle une méthode où on mettra par la suite le code de configuration de la grille. 
         <br/><br/>
-        <img src="images/declarergrille.PNG"/>
-        <img src="images/exemple3-initialiser.PNG"/>
+        <img src="images/declarergrille.png"/>
+        <img src="images/exemple3-initialiser.png"/>
         <br/><br/>
         2.  On fait la configuration de base de notre grille dans la méthode qu'on vient de créer. 
         Il s'agit d'une configuration typique d'une grille DHTMLX. Le nombre de configurations possibles est assez élevé et nous n'en touchons qu'une partie dans cet exemple. 
@@ -241,12 +241,12 @@
         La chose la plus importante à se rappeler est qu'il faut appeler la méthode .init() de notre grille seulement à la toute fin des configurations sans faute. 
         Sinon, la grille ne fonctionnera pas. 
         <br/><br/>
-        <img src="images/exemple3-config.PNG"/>
+        <img src="images/exemple3-config.png"/>
         <br/><br/>
         3.  Maintenant, il ne reste plus qu'à ajouter les données dans la grille.  On va donc générer manuellement des données fictives pour le cas de l'exemple.  Toutefois, il faut 
         savoir que l'on pourrait bien charger des données provenant d'une base de données, de JSON, d'un XML, etc.  
         <br/><br/>
-        <img src="images/exemple3-generer.PNG"/>
+        <img src="images/exemple3-generer.png"/>
         <br/><br/>
         À noter : Il est possible de modifier les données en faisant un double-clic sur une case de la grille et en appuyant ensuite sur la touche entrée lorsque la modification est finie.
     </p>
@@ -263,18 +263,18 @@
         <br/>
         1.  On commence donc par initialiser notre barre d'outils en l'attachant à notre cellule « a » du layout.
         <br/><br/>
-        <img src="images/exemple4-init.PNG"/>
+        <img src="images/exemple4-init.png"/>
         <br/><br/>
         2.  On va ensuite configurer la barre d'outils en ajoutant des boutons, des icônes et du texte.
         <br/><br/>
-        <img src="images/exemple4-config.PNG"/>
+        <img src="images/exemple4-config.png"/>
         <br/><br/>
         3.  Finalement, on va associer des actions à l'événement « onClick » de notre barre.  L'événement prend en note l'identifiant du composant cliqué et c'est de cela qu'on se sert 
         pour déterminer l'action à effectuer par la suite.  Il faut noter que cet événement n'est qu'un seul parmi tant d'autres.  Pour une liste de tous les événements possibles, on peut consulter la 
         <a href="https://docs.dhtmlx.com/api__refs__dhtmlxtoolbar_events.html" target="_blank">documentation</a> pour un composant DHTMLX.  On peut même pousser un peu plus loin et afficher un petit 
         message avec DHTMLX pour dire que l'entrée est supprimée ou ajoutée.
         <br/><br/>
-        <img src="images/exemple4-event.PNG"/>
+        <img src="images/exemple4-event.png"/>
         <br/><br/>
     </p>
     <div id="exempleFenetre" onclick='ouvrirFenetreExemple4()'>
