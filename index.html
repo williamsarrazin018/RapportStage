@@ -1,0 +1,684 @@
+
+
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Rapport technique - William Sarrazin</title>
+    <meta name="description" content="Rapport technique de William Sarrazin (201704850) sur la librairie DHTMLX.">
+    <meta name="author" content="WilliamSarrazin">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="codebase/dhtmlx.js" type="text/javascript"></script> 
+    <link rel="stylesheet" type="text/css" href="codebase/dhtmlx.css"> 
+
+</head>
+<body>
+
+    
+  <header><h1>Rapport technique sur la librairie DHTMLX</h1>
+    <h2>Par William Sarrazin</h2></header>
+  <div id="main">
+    <article>
+
+      <h3 id="titre1">Introduction</h3>
+      <p>
+        Tout au long de mon stage chez Hydro-Québec, ma principale tâche était de faire le développement de différentes applications Web. 
+        Je peux facilement dire que j’ai acquis beaucoup de nouvelles connaissances et que j’y ai aussi approfondie certaines que j’avais déjà acquises. 
+        J’ai travaillé avec un grand nombre de langages de programmation et de technologies différentes.  Par exemple, j’ai travaillé avec SQL, HTML, CSS, PHP, JavaScript, XML, etc. 
+        Je dirais que ce que j’ai le plus amélioré, au cours des derniers mois, sont mes connaissances au niveau Web et plus particulièrement celles en JavaScript.  
+        C’est entre autres l’utilisation de la librairie JavaScript DHTMLX qui en est la cause. 
+        C’est d’ailleurs à propos de cette librairie que portera mon rapport technique puisqu’elle a été quelque chose de nouveau pour moi niveau informatique et qu’elle compose une majeure partie de mon stage.
+      </p>
+      <br/>
+
+      <h3 id="titre2">Qu’est-ce que DHTMLX?</h3>
+      <p>
+        DHTMLX est une librairie JavaScript qui vient nous offrir une panoplie d’éléments graphiques à utiliser lors de la création d’une application Web. 
+        Que ce soit un menu, une barre d’outils, un formulaire ou n’importe quoi d’autre, on peut trouver tous les éléments graphique qu’on veut dans celle-ci.  
+        DHTMLX nous donne aussi la possibilité de gérer de nombreux événements de notre application Web en lien avec ses différentes composantes.  
+        Par exemple, on serait en mesure de gérer le clic d’un utilisateur sur un item de notre menu DHTMLX.  
+        C’est une librairie qui est très performante lorsqu’il est temps de créer des applications Web assez complexes sans trop de temps. 
+        Sa grande facilité d’utilisation est vraiment d’une grande aide au programmeur et vient la démarquer comme librairie.
+      </p>
+      <br/>
+
+      <h3 id="titre3">Utilité, points positifs et points négatifs</h3>
+      <p>
+        Comme je le citais plus haut, cette librairie est extrêmement performante lorsque vient le temps de développer des outils complexes et de façon rapide. 
+        Cela nous sauve beaucoup de temps de développement puisqu’une grande partie du code que l’on devrait écrire en HTML normalement est gérée par DHTMLX par défaut.  
+        En effet, on ne fait qu’appeler le constructeur de l’objet DHTMLX tout en le configurant et le tour est joué!
+      </p>
+      <br/>
+
+      <p>
+          Donc, pour faire une tâche similaire, faire l’usage de la librairie DHTMLX au lieu que du HTML pur comporte beaucoup d’avantages :
+          <br/>
+          <br/>
+          <span class="avantage"><img src="images/arrow.png"/> Compatible pour tous les principaux navigateurs Web tels que Internet Explorer (version 8 et plus), Firefox, Safari, Opera, Chrome, etc.</span>
+          <br/>
+          <br/>
+          <span class="avantage"><img src="images/arrow.png"/> La librairie est vraiment facile à utiliser et à maîtriser rapidement.</span>
+          <br/>
+          <br/>
+          Pour quelqu’un ayant une bonne connaissance de la programmation Web ainsi que de la programmation orientée objet, il est facile de vite maîtriser la librairie à l’aide de 
+          la <a href="https://docs.dhtmlx.com/" target="_blank">documentation en ligne</a> qui est très détaillée et complète. 
+           En effet, après quelques jours de stages seulement, je commençais déjà à être très à l’aise avec la librairie.  
+          <br/>
+          <br/>
+          <span class="avantage"><img src="images/arrow.png"/> La documentation de la librairie est vraiment bien construite et accessible.</span>
+          <br/>
+          <br/>
+          En fait, cela rend la résolution des problèmes rencontrés ou de quelconques questionnements vraiment facile.  
+          On y trouve toutes sortes d’informations concernant les différents objets et leurs fonctions ainsi que de nombreuses démonstrations pour nous aider dans le développement.
+          <br/>
+          <br/>
+          <br/>
+          Malgré tous ces avantages, c'est en utilisant la librairie régulièrement que j’ai remarqué quelques points qui pourraient être considérés comme des désavantages de DHTMLX.
+          <br/>
+          <br/>
+          <span class="desavantage"><img src="images/arrow.png"/> Les éléments DHTMLX ont un style particulier qui est assez difficile à changer comme on veut avec le CSS.</span>
+          <br/>
+          <br/>
+          On peut changer l'apparence facilement avec quatre «skins» qui nous sont offerts par la librairie.  Il s'agit des styles nommés Skyblue, Web, Terrace et Material.
+            On reste tout de même très limité avec ces options si on ne veut pas se lancer dans le CSS pour modifier les éléments graphiques.  
+            Encore là, les objets DHTMLX sont assez difficiles à modifier avec le CSS.  On peut voir de quoi on l'air les différents skins 
+            <a href="https://dhtmlx.com/docs/products/dhtmlxWindows/samples/01_init/06_skins.html" target="_blank">ici</a>.
+          <br/>
+          <br/>
+          <span class="desavantage"><img src="images/arrow.png"/> Il y a une version standard et pro de la librairie DHTMLX.</span>
+          <br/>
+          <br/>
+          En effet, si on ne désire pas dépenser pour faire l’achat de la version pro, on pourrait être limité à un certain moment dans ce qu'on veut créer comme application.
+      </p>
+
+      <br/>
+
+      <h3 id="titre4">Comment on l'utilise chez Hydro-Québec</h3>
+      <p>
+        Chez Hydro-Québec, pour le stage, on utilise la version pro de la librairie. 
+        Celle-ci est utilisée en majorité un peu partout en tandem avec d’autres technologies au centre d'opération TI. 
+        Par exemple, elle est utilisée le portail OETIC qui rassemble des liens vers plusieurs outils qui aident les usagers dans leurs tâches à l’interne. 
+        C’est là que j’ai programmé mes différents outils Web et c’est presque entièrement fait à l’aide de DHTMLX. 
+        On pourrait donc dire que cette librairie est assez primordiale au fonctionnement de l’entreprise. 
+        C'est vraiment une bonne façon de créer des outils puissants, beaux et qui sont prêts à être utilisés rapidement.
+      </p>
+      <br/>
+
+      <h3 id="titre5">Éléments utilisés principalement</h3>
+      <p>
+          Il y a une panoplie de composantes graphiques dans la librairie comme on peut le voir ici :
+          <br/>
+          <br/>
+          <img src="images/composantes_dhtmlx.png" />
+          <br/>
+          <br/>
+          Toutefois, durant mon stage, il y en a certaines que j’ai utilisées plus que d’autres et que j’ai trouvées vraiment impressionnantes niveau performance. 
+          Par exemple, j’ai beaucoup utilisé l'accordéon, la boîte combo, l'éditeur de texte, le formulaire, la grille, le layout, le menu, le pop-up, la barre d'onglets, la barre d'outils, les fenêtres et le planificateur. 
+          D’ailleurs, je vais faire une petite démonstration de l’utilisation de base de certains de ces éléments un peu plus loin.
+          
+      </p>
+      <br/>
+      <h3 id="titre6">Initialiser DHTMLX dans un projet Web</h3>
+      <p>
+          L’initialisation de la librairie est vraiment simple à achever et cela se fait en quelques étapes seulement.
+          <br/>
+          <br/>
+          1- Tout d’abord, il faut aller sur le <a href="https://dhtmlx.com/docs/products/dhtmlxSuite/download.shtml" target="_blank">site officiel</a> de DHTMLX et télécharger la suite DHTMLX voulue.  Dans notre cas, ce sera la version Standard.
+          <br/>
+          <br/>
+          2- Il faut ensuite aller créer un dossier qui contiendra nos fichiers du projet.
+          <br/>
+          <br/>
+          3- On va chercher le dossier nommé « codebase » à la racine de « dhtmlxSuite » qu'on vient de télécharger et on l’extrait dans notre dossier de projet.
+          <br/> 
+          <br/>
+          4- On doit créer notre fichier HTML de base « index.html » dans notre dossier de projet à la racine.
+          <br/>
+          <br/>
+          5- Dans notre index.html, on doit inclure les fichiers « dhtmlx.js » et « dhtmlx.css » entre les deux balises « head » au début du fichier.
+          <br/><br/>
+          <img src="images/imports.PNG"/>
+          <br/><br/>
+          Après ces cinq étapes faciles, nous sommes déjà prêts à commencer à utiliser DHTMLX.
+      </p>
+
+      <br/>
+
+      <h3 id="titre7">Création d’un composant graphique DHTMLX</h3>
+      <p>
+          Avant de commencer, il faut savoir qu’il y a deux façons de créer des éléments DHTMLX.  
+          On peut en créer directement en JavaScript dans une balise script de notre code HTML et l’attacher à une autre composante.  
+          Par exemple, on peut voir l’initialisation d’une barre d’outils dans une cellule d’un layout ici :
+          <br/>
+          <br/>
+          <img src="images/exemple-initjs.PNG"/>
+          <br/>
+          <br/>
+          C’est une méthode intéressante, mais je préfère la deuxième qui consiste à créer un élément HTML comme un « div » et à lui lier un objet DHTMLX. 
+          De cette façon, on sépare plus notre code en ayant une première partie qui est un genre de squelette en pur HTML et une autre partie dans nos balises « script » qui applique le DHTMLX. 
+          Je trouve que ça nous donne une utilisation beaucoup plus simple et que ça fait un code un peu plus ordonné. 
+          De plus, ça rend le tout beaucoup plus malléable pour positionner les composantes ou leur donner un style particulier avec le CSS puisqu’on aura pu leur attribuer une classe ou un identifiant. 
+          <br/>
+          <br/>
+          Toutefois, lorsqu'il s'agit de choses moins complexes, j'aime mieux la première façon d'initialiser un objet DHTMLX. 
+          C'est d'ailleurs de la première façon que nous le ferons dans notre exemple plus tard puisque ce n'est pas d'une complexité trop élevée. 
+          Par exemple, on peut voir l’initialisation d’une barre d’outils dans un div ici : 
+          <br/>
+          <br/>
+          <img src="images/exemple-initdiv.PNG"/>
+
+      </p>
+      <br/>
+      <h3 id="titre8">Démonstration</h3>
+      <p>
+        Maintenant que vous savez un peu plus ce qu'est la librairie DHTMLX et à quoi elle sert, il est temps de faire une petite démonstration de comment en l’utilise. 
+        Dans cette section, je vais donc vous présenter certaines des composantes que j'ai le plus utilisées avec DHTMLX tout au long de mon stage et que je trouve dignes d'être mentionnées. 
+        Je vous présenterai donc un exemple de base typique que j'ai utilisé dans plusieurs des outils que j'ai développés durant le stage. 
+        Je vais vous montrer la démarche détaillée de la création, en DHTMLX, d'une fenêtre comportant une grille qui va nous permettre de gérer des données.
+      </p>
+      <br/>
+
+
+      <h4 id="titre9">Les fenêtres (dhtmlxWindows)</h4>
+      <p>
+        La fenêtre de la librairie DHTMLX est, comme un peu partout ailleurs, un outil très utile pour le développement d'applications. 
+        Je ne m'attarderai pas trop sur ce qu'est vraiment une fenêtre en général, mais plutôt sur comment on l'utilise ici. 
+        Donc, sans plus tarder, voici les étapes pour créer notre fenêtre de base : 
+        <br/><br/>
+        1.  On va créer une balise div en HMTL qui agira comme un bouton. En cliquant dessus, on appellera la méthode qui va créer notre fenêtre. 
+        <br/><br/>
+        <img src="images/exemple1-bouton.png"/>
+        <br/><br/>
+        2.  Dans notre fonction appelée au clic de notre bouton, on va initialiser notre variable de fenêtres et créer notre fenêtre d'exemple d'après celle-ci.  On va ensuite lui donner une configuration minimale de base avec un titre et de 
+        bonnes dimensions.
+        <br/><br/>
+        <img src="images/exemple1-fenetre.png"/>
+        <br/><br/>
+      </p>
+      <div id="exempleFenetre" onclick='ouvrirFenetreExemple1()'>
+            Cliquer ici pour l'exemple
+      </div>
+
+      <h4 id="titre10">Les layouts (dhtmlxLayout)</h4>
+      <p>
+        Le layout est toujours une composante très importante dans n'importe quel langage et c'est aussi le cas chez DHTMLX.  On peut attacher un layout directement autant dans une fenêtre DHTMLX que dans un élément 
+        HTML comme une balise div, body, section, article, etc.  Le layout sert surtout à organiser notre page, à lui donner un gabarit de base composé de différentes cellules.  Avec notre librairie, on a le choix de 
+        plusieurs modèles et on en précisera un lors de la création de notre layout.  En fait, il y a 39 modèles qu'on peut choisir comme on peut voir ici : 
+        <br/><br/>
+        <img src="images/layout-patterns.PNG"/>
+        <br/><br/>
+        1.  Toujours à partir de notre méthode pour créer la fenêtre, on initialise un layout de type « 1C » dans notre cas en l'attachant à notre fenêtre.
+        <br/><br/>
+        <img src="images/exemple2-initialiserlayout.PNG"/>
+        <br/><br/>
+        2.  On va ensuite changer le titre de la cellule de notre layout.  Si on avait un layout à plusieurs cellules, on pourrait changer le titre de chacune d'elles en précisant la lettre de la cellule.
+        <br/><br/>
+        <img src="images/exemple2-changertitre.PNG"/>
+        <br/><br/>
+      </p>
+      <div id="exempleFenetre" onclick='ouvrirFenetreExemple2()'>
+            Cliquer ici pour l'exemple
+        </div>
+    <h4 id="titre11">Les Grilles (dhtmlxGrid)</h4>
+    <p>
+        La grille de DHTMLX est, d'après moi, l'outil le plus puissant et le plus pratique de cette librairie. 
+        La grille nous permet de traiter de grands nombres de données venant autant d'une base de données, d'un fichier ou d'autres sources. 
+        Elle nous permet d'afficher des données, de modifier des données, de faire des recherches parmi celles-ci, de les trier via des filtres de colonnes, et bien d'autres options. 
+        C'est un des outils qu'on a beaucoup utilisé dans nos applications Web au cours du stage. 
+        Toutefois, c'est probablement aussi un des outils les plus complexes de la librairie. 
+        Pour notre exemple, on va créer une grille de base dans notre layout et on entrera les données à l’intérieur de façon manuelle avec une boucle. Voici les étapes à suivre : 
+        <br/>
+        <br/>
+        1.  On commence par initialiser notre grille en l'attachant dans la cellule « a » de notre layout et on appelle une méthode où on mettra par la suite le code de configuration de la grille. 
+        <br/><br/>
+        <img src="images/declarergrille.PNG"/>
+        <img src="images/exemple3-initialiser.PNG"/>
+        <br/><br/>
+        2.  On fait la configuration de base de notre grille dans la méthode qu'on vient de créer. 
+        Il s'agit d'une configuration typique d'une grille DHTMLX. Le nombre de configurations possibles est assez élevé et nous n'en touchons qu'une partie dans cet exemple. 
+        Il s'agit des configurations les plus utilisées pendant mon stage, mais, si on voulait en voir la liste complète, on peut se référer à la <a href="https://docs.dhtmlx.com/grid__configuring_the_grid.html" target="_blank">documentation DHTMLX</a>. 
+        La chose la plus importante à se rappeler est qu'il faut appeler la méthode .init() de notre grille seulement à la toute fin des configurations sans faute. 
+        Sinon, la grille ne fonctionnera pas. 
+        <br/><br/>
+        <img src="images/exemple3-config.PNG"/>
+        <br/><br/>
+        3.  Maintenant, il ne reste plus qu'à ajouter les données dans la grille.  On va donc générer manuellement des données fictives pour le cas de l'exemple.  Toutefois, il faut 
+        savoir que l'on pourrait bien charger des données provenant d'une base de données, de JSON, d'un XML, etc.  
+        <br/><br/>
+        <img src="images/exemple3-generer.PNG"/>
+        <br/><br/>
+        À noter : Il est possible de modifier les données en faisant un double-clic sur une case de la grille et en appuyant ensuite sur la touche entrée lorsque la modification est finie.
+    </p>
+    <div id="exempleFenetre" onclick='ouvrirFenetreExemple3()'>
+            Cliquer ici pour l'exemple
+    </div>
+
+    <h4 id="titre12">La barre d'outils (dhtmlxToolbar)</h4>
+    <p>
+        La barre d'outils est un outil très pratique de la librairie DHTMLX. Celle-ci est généralement située en haut de notre page ou de notre cellule du layout et nous offre toutes sortes d'options qui auront été définies par le développeur de l'application. En effet, on peut y rajouter toutes sortes de boutons qui donneront lieu à différents types d'événements utiles à l'application. 
+        On peut aussi y ajouter du texte et des images. 
+        Dans notre exemple, on créera un bouton qui nous permettra d'ajouter une entrée dans notre grille et  un autre qui nous permettra d'en supprimer une. 
+        <br/>
+        <br/>
+        1.  On commence donc par initialiser notre barre d'outils en l'attachant à notre cellule « a » du layout.
+        <br/><br/>
+        <img src="images/exemple4-init.PNG"/>
+        <br/><br/>
+        2.  On va ensuite configurer la barre d'outils en ajoutant des boutons, des icônes et du texte.
+        <br/><br/>
+        <img src="images/exemple4-config.PNG"/>
+        <br/><br/>
+        3.  Finalement, on va associer des actions à l'événement « onClick » de notre barre.  L'événement prend en note l'identifiant du composant cliqué et c'est de cela qu'on se sert 
+        pour déterminer l'action à effectuer par la suite.  Il faut noter que cet événement n'est qu'un seul parmi tant d'autres.  Pour une liste de tous les événements possibles, on peut consulter la 
+        <a href="https://docs.dhtmlx.com/api__refs__dhtmlxtoolbar_events.html" target="_blank">documentation</a> pour un composant DHTMLX.  On peut même pousser un peu plus loin et afficher un petit 
+        message avec DHTMLX pour dire que l'entrée est supprimée ou ajoutée.
+        <br/><br/>
+        <img src="images/exemple4-event.PNG"/>
+        <br/><br/>
+    </p>
+    <div id="exempleFenetre" onclick='ouvrirFenetreExemple4()'>
+            Cliquer ici pour l'exemple
+    </div>
+
+    <h3 id="titre13">Suite à la démonstration</h3>
+      <p>
+        Après cette démonstration de base, on voit un peu mieux en quoi cette librairie est performante. 
+        En effet, on peut créer des objets graphiques assez complexes et, comme on a pu le voir, le faire très facilement et en un temps rapide. 
+        On peut imaginer que de créer la même chose en pure HTML, JavaScript et CSS n'aurait pas été la chose la plus efficace ni facile. 
+        Ma démonstration vous démontre d’une façon un peu plus simple une grande partie de ce que j'ai fait durant mon stage. 
+        En effet, j'ai dû travailler sur beaucoup d'applications qui fonctionnaient déjà avec des grilles ou créer des applications où j'ai dû créer mes propres grilles et manipuler les données associées. Je n'ai démontré que quelques éléments importants de la librairie, mais il ne faut pas oublier qu'on aurait pu ajouter plusieurs autres composantes dans notre application comme des menus déroulants, des boîtes combos, des calendriers, des listes, des diagrammes et j'en passe plusieurs. 
+        La librairie DHTMLX est vraiment très complète et offre des milliers de possibilités au développeur d'applications Web.
+      </p>
+
+      <h3 id="titre14">Mes projets</h3>
+      <p>
+            Il ne faut pas oublier que l’exemple qu’on vient de faire est bien représentatif de la librairie, mais qu’il reste toutefois d’une grande simplicité.  Donc, pour vous montrer d’autres exemples d'interfaces plus complexes créées avec DHTMLX, je vais vous présenter brièvement les projets sur lesquels j'ai travaillé durant mon stage. 
+        <br/>
+        <br/>
+        J'ai travaillé sur un premier projet relié à l'assurance qualité du système de billet utilisé par le centre d'exploitation pour les incidents. 
+        J'y ai amélioré l'affichage des informations qui y sont affichées. J'ai développé un système de diffusion pour les billets également. 
+        Par exemple, une personne peut maintenant diffuser un billet qui a besoin d'être vérifié à une certaine personne. 
+        Sinon, j'ai aussi développé une vue qui affiche différentes statistiques du centre d'exploitation pour l'équipe selon différents filtres. 
+        Ce fut probablement le projet sur lequel j'ai travaillé le plus longtemps lors du stage. 
+        <br/>
+        <br/>
+        Le deuxième projet sur lequel j'ai travaillé était une liste qui affiche des tâches de changement. 
+        Il s'agit d'un nouveau module qui permet d'afficher les différentes tâches de changement qui sont en cours et différentes informations sur celles-ci. 
+        Une tâche de changement est créée à la suite d'une demande d'arrêt d'un service pour faire une tâche précise. 
+        Par exemple, on peut faire une demande si on a besoin qu'un service du serveur soit inactif, durant une certaine période, pour faire une certaine tâche et c'est là qu'on crée une tâche de changement. 
+        Bref, j'ai créé une interface comportant différentes grilles qui affiche certaines informations cruciales sur les changements. 
+        Par exemple, on a une grille affichant les tâches en cours, les tâches à venir, les tâches passées, etc.  
+        J'ai aussi développé une fonction de recherche, une vue de détails, un système pour surveiller des changements, un système de messages, une vue de tous les changements en cours, etc. 
+        Ce fut un gros projet assez complexe à réaliser, car il y avait beaucoup d’informations à gérer et les requêtes étaient lourdes.
+        <br/>
+        <br/>
+        Mon troisième est une liste qui affiche des incidents et c'est un projet qui est beaucoup moins massif que mes deux premiers. 
+        Il s'agit d'une grille qui prend toute la page affichant tous les incidents et qu'on peut restreindre selon différent types de filtres. 
+        Par exemple, on peut voir les différents incidents par date, par année, par mois, par semaine, etc. Il fallait aussi faire le code pour que chaque utilisateur puisse choisir quelles colonnes de la grille il veut voir, dans quel ordre il les voit et qu’il puisse sauvegarder le tout dans une base de données. 
+        Ce fut probablement la partie la plus difficile du projet. 
+        Toutefois, le projet fut réalisé en seulement quelques jours puisque j’ai pu réaliser beaucoup de code provenant de mes autres projets. 
+        Cela vient nous montrer, encore une fois, à quel point cette librairie est performante pour créer des outils performants et utiles en un temps minime.
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+            <div class="numbertext">1</div>
+            <img src="images/screens-projets/aqc-affichage.png" style="width:100%">
+            <div class="text">Projet d'assurance qualité des billets</div>
+            </div>
+        
+            <div class="mySlides fade">
+            <div class="numbertext">2</div>
+            <img src="images/screens-projets/aqc-resolu.png" style="width:100%">
+            <div class="text">Projet d'assurance qualité des billets - menu de diffusions</div>
+            </div>
+        
+            <div class="mySlides fade">
+            <div class="numbertext">3</div>
+            <img src="images/screens-projets/aqcd-stats.png" style="width:100%">
+            <div class="text">Projet d'assurance qualité des billets - statistiques</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">4</div>
+                <img src="images/screens-projets/ldc-main.png" style="width:100%">
+                <div class="text">Projet liste de changements - Vue principale</div>
+            </div>
+
+            <div class="mySlides fade">
+                    <div class="numbertext">5</div>
+                    <img src="images/screens-projets/ldc-calendar.png" style="width:100%">
+                    <div class="text">Projet liste de changements - Vue calendrier</div>
+                </div>
+
+            <div class="mySlides fade">
+                    <div class="numbertext">6</div>
+                    <img src="images/screens-projets/ldc-details.png" style="width:100%">
+                    <div class="text">Projet liste de changements - Vue détails</div>
+                </div>
+
+            <div class="mySlides fade">
+                    <div class="numbertext">6</div>
+                    <img src="images/screens-projets/ldc-tous.png" style="width:100%">
+                    <div class="text">Projet liste de changements - Vue Tous</div>
+                </div>
+        
+            <div class="mySlides fade">
+                    <div class="numbertext">7</div>
+                    <img src="images/screens-projets/ldc-message.png" style="width:100%">
+                    <div class="text">Projet liste de changements - Vue messages</div>
+                </div>
+            <div class="mySlides fade">
+                    <div class="numbertext">8</div>
+                    <img src="images/screens-projets/LDI.png" style="width:100%">
+                    <div class="text">Projet liste des incidents</div>
+                </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
+            <span class="dot" onclick="currentSlide(5)"></span> 
+            <span class="dot" onclick="currentSlide(6)"></span> 
+            <span class="dot" onclick="currentSlide(7)"></span> 
+            <span class="dot" onclick="currentSlide(8)"></span> 
+        </div>
+
+        
+      </p>
+
+      <h3 id="titre15">Conclusion</h3>
+      <p>
+        En conclusion, pour ce qui est de mon expérience avec la librairie DHTMLX, j’ai presque juste des choses positives à dire. 
+        En fait, j’ai beaucoup aimé sa grande simplicité d’utilisation qui m’a permis de créer des interfaces et de gérer des événements rapidement. 
+        Toutefois, la seule chose que j’ai moins aimée en faisant son usage est qu’il est assez difficile d’obtenir le style qu’on a en tête en utilisant le CSS avec les composantes graphiques DHTMLX. Selon moi, malgré le style particulier de DHTMLX, cette librairie est vraiment utile pour le développement d’application Web complexes et je la recommanderais sans hésiter à n’importe quel développeur Web. 
+        Je vous invite forcement à l'essayer si vous êtes intéressés par le développement Web et je suis sûr que vous ne serez pas déçus!
+      </p>
+
+    </article>
+    <nav>
+        <ul>
+            <li><a href="#titre1">Introduction</a></li>
+            <li><a href="#titre2">Qu'est-ce que DHTMLX?</a></li>
+            <li><a href="#titre3">Utilité, points positifs et points négatifs</a></li>
+            <li><a href="#titre4">Comment on l'utilise chez Hydro-Québec</a></li>
+            <li><a href="#titre5">Éléments utilisés principalement</a></li>
+            <li><a href="#titre6">Initialiser DTMLX dans un projet Web</a></li>
+            <li><a href="#titre7">Création d'un composant graphique DHTMLX</a></li>
+            <li><a href="#titre8">Démonstration</a></li>
+            <li><a href="#titre9">Les fenêtres (dhtmlxWindows)</a></li>
+            <li><a href="#titre10">Les layouts (dhtmlxLayout)</a></li>
+            <li><a href="#titre11">Les grilles (dhtmlxGrid)</a></li>
+            <li><a href="#titre12">La barre d'outils (dhtmlxToolbar)</a></li>
+            <li><a href="#titre13">Suite à la démonstration</a></li>
+            <li><a href="#titre14">Mes projets</a></li>
+            <li><a href="#titre15">Conclusion</a></li>
+        </ul>
+    </nav>
+    <aside> 
+        <img src="images/dhtmlx.png" />
+    </aside>
+  </div>
+  <footer>
+      Rapport fait par William Sarrazin
+      <br/>
+      <br/>
+      Références :
+      <br/>
+      Le <a href="https://dhtmlx.com/" target="_blank">site Web</a> de la librairie DHTMLX
+      <br/>
+      La <a href="https://docs.dhtmlx.com/" target="_blank">documentation</a> de la librairie DHTMLX
+  </footer>
+</body>
+
+<script>
+
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+
+    //Variable qu'on utilisera pour créer nos futures fenêtres.
+    var mesFenetres = new dhtmlXWindows();
+
+    var grilleExemple;
+    var toolbarExemple;
+   
+    function ouvrirFenetreExemple1() {
+        //Paramètres : Id de la fenêtre, position en X, position en Y, largeur et hauteur
+        var fenetreExemple = mesFenetres.createWindow("fenetreExemple", 300, 300, 800, 500);
+
+        //Centrer la fenêtre dans l'écran
+        fenetreExemple.centerOnScreen();
+
+        //Enlever la possibilité de redimensionner la fenêtre
+        fenetreExemple.denyResize();
+
+        //Changer le titre de la fenêtre
+        fenetreExemple.setText("Exemple");
+
+        //Initilisation du layout
+       /* var layoutFenetre = fenetreExemple.attachLayout("1C");
+
+        //Changer le titre de la cellule 'a' du layout
+        layoutFenetre.cells("a").setText("Cellule du layout");
+
+        //Initialisation de la grille dans notre layout
+        grilleExemple = layoutFenetre.cells("a").attachGrid();
+
+        configurerGrille();
+
+        //Initialiser la barre d'outils
+        toolbarExemple = layoutFenetre.cells("a").attachToolbar();
+
+        configurerToolbar();*/
+
+    }
+
+    function ouvrirFenetreExemple2() {
+        //Paramètres : Id de la fenêtre, position en X, position en Y, largeur et hauteur
+        var fenetreExemple = mesFenetres.createWindow("fenetreExemple", 300, 300, 800, 500);
+
+        //Centrer la fenêtre dans l'écran
+        fenetreExemple.centerOnScreen();
+
+        //Enlever la possibilité de redimensionner la fenêtre
+        fenetreExemple.denyResize();
+
+        //Changer le titre de la fenêtre
+        fenetreExemple.setText("Exemple");
+
+        //Initilisation du layout
+        var layoutFenetre = fenetreExemple.attachLayout("1C");
+
+        //Changer le titre de la cellule 'a' du layout
+        layoutFenetre.cells("a").setText("Cellule du layout");
+
+        //Initialisation de la grille dans notre layout
+        grilleExemple = layoutFenetre.cells("a").attachGrid();
+
+        /*configurerGrille();
+
+        //Initialiser la barre d'outils
+        toolbarExemple = layoutFenetre.cells("a").attachToolbar();
+
+        configurerToolbar();*/
+
+    }
+
+    function ouvrirFenetreExemple3() {
+        //Paramètres : Id de la fenêtre, position en X, position en Y, largeur et hauteur
+        var fenetreExemple = mesFenetres.createWindow("fenetreExemple", 300, 300, 800, 500);
+
+        //Centrer la fenêtre dans l'écran
+        fenetreExemple.centerOnScreen();
+
+        //Enlever la possibilité de redimensionner la fenêtre
+        fenetreExemple.denyResize();
+
+        //Changer le titre de la fenêtre
+        fenetreExemple.setText("Exemple");
+
+        //Initilisation du layout
+        var layoutFenetre = fenetreExemple.attachLayout("1C");
+
+        //Changer le titre de la cellule 'a' du layout
+        layoutFenetre.cells("a").setText("Cellule du layout");
+
+        //Initialisation de la grille dans notre layout
+        grilleExemple = layoutFenetre.cells("a").attachGrid();
+
+        configurerGrille();
+/*
+        //Initialiser la barre d'outils
+        toolbarExemple = layoutFenetre.cells("a").attachToolbar();
+
+        configurerToolbar();*/
+
+    }
+
+    function ouvrirFenetreExemple4() {
+        //Paramètres : Id de la fenêtre, position en X, position en Y, largeur et hauteur
+        var fenetreExemple = mesFenetres.createWindow("fenetreExemple", 300, 300, 800, 500);
+
+        //Centrer la fenêtre dans l'écran
+        fenetreExemple.centerOnScreen();
+
+        //Enlever la possibilité de redimensionner la fenêtre
+        fenetreExemple.denyResize();
+
+        //Changer le titre de la fenêtre
+        fenetreExemple.setText("Exemple");
+
+        //Initilisation du layout
+        var layoutFenetre = fenetreExemple.attachLayout("1C");
+
+        //Changer le titre de la cellule 'a' du layout
+        layoutFenetre.cells("a").setText("Cellule du layout");
+
+        //Initialisation de la grille dans notre layout
+        grilleExemple = layoutFenetre.cells("a").attachGrid();
+
+        configurerGrille();
+
+        //Initialiser la barre d'outils
+        toolbarExemple = layoutFenetre.cells("a").attachToolbar();
+
+        configurerToolbar();
+
+    }
+
+    function configurerGrille() {
+
+        //On met le chemin vers les images de la grille
+        grilleExemple.setImagePath("./codebase/imgs/");
+
+        //On met le format de date à afficher dans la grille par défaut, soit YYYY-mm-dd 
+        grilleExemple.setDateFormat("%Y-%m-%d %H:%i:%s" );
+
+        //On choisit le titre des colonnes de la grille
+        grilleExemple.setHeader("Titre,Message,Date de début,Date de fin");
+
+        grilleExemple.setColAlign("left,center,right,right");
+
+        //On choisit le type des colonnes.  Ici il s'agit de deux champs de texte modifiable et deux champs de date modifiables
+        grilleExemple.setColTypes( "edtxt,edtxt,dhxCalendar,dhxCalendar" );
+
+        //On indique si on veut que les colonnes soient redimensionnable
+        grilleExemple.enableResizing("true,false,false,false");
+        
+        //En pourcentagem on choisit la largeur des colonnes à l'initialisation
+        grilleExemple.setInitWidthsP( "25,25,25,25" );
+
+        //Permet le retour à la ligne automatique dans l'afficahge de champs trop longs pour la cellule
+        grilleExemple.enableMultiline(true); 
+
+        //Permet de charger les données au fur et à mesure pour améliorer la performance
+        grilleExemple.enableSmartRendering(true,10);
+
+        //Initialiser la grille.  Important de le faire à la fin des configurations.
+        grilleExemple.init();
+
+        //Générer des données fictives pour l'exemple
+        for(var i = 1; i <= 30; i++) {
+            grilleExemple.addRow(i, "Titre "+i+",Message "+i+",2019-04-16 16:10:50,2019-04-17 16:10:50");
+        }
+    }
+
+    function configurerToolbar() {
+        //Chemin vers notre dossier d'images
+        toolbarExemple.setIconsPath("./images/");
+
+        //Ajout de texte
+        toolbarExemple.addText("texteAjouter", 1, "Texte Ajouter :");
+
+        //Ajout du bouton "Ajouter".  Les paramètres en ordre sont le ID, la position dans la barre, le texte et l'icône
+        toolbarExemple.addButton("ajouter", 1, "Ajouter", "add.png");
+
+        //Ajouter un séparateur
+        toolbarExemple.addSeparator("separateur1", 3);
+
+        //Ajout de texte
+        toolbarExemple.addText("texteSupprimer", 4, "Texte Supprimer :");
+
+        //Ajout du bouton "Ajouter".  Les paramètres en ordre sont le ID, la position dans la barre, le texte et l'icône
+        toolbarExemple.addButton("supprimer", 5, "Supprimer", "delete.png");
+
+        //On crée l'événement
+        var evenementOnClick = toolbarExemple.attachEvent("onClick", function(id) {
+            
+            if( id == "ajouter" ) {
+                
+                //Ajouter une ligne dans a grille
+                grilleExemple.addRow("idFictif", "Titre Ajouter,Message Ajouter,2019-04-16 16:10:50,2019-04-17 16:10:50");
+
+                //Afficher un message avec DHTMLX
+                dhtmlx.message("Entrée ajoutée!");
+
+            } else if( id == "supprimer" &&  grilleExemple.getSelectedRowId() != null) {
+                //Supprimer la ligne de la grille
+                grilleExemple.deleteRow(grilleExemple.getSelectedRowId());
+
+                //Afficher un message avec DHTMLX
+                dhtmlx.message("Entrée suprimmée!");
+            }
+        
+        });
+    }
+
+</script>
